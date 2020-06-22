@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using AssetPertamina.Models;
-using AssetPertamina.Areas.Base.Controllers;
+
 using Microsoft.EntityFrameworkCore;
+using AssetPertamina.Areas.Base.Controllers;
+using AssetPertamina.Services;
 
 namespace AssetPertamina.Controllers
 {
@@ -16,6 +18,7 @@ namespace AssetPertamina.Controllers
     {
        
         private readonly ILogger<HomeController> _logger;
+        UnitServices _unitService = new UnitServices();
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -40,7 +43,7 @@ namespace AssetPertamina.Controllers
         
         public async Task<IActionResult> Listunit()
         {
-            return View(await _context.TbUnit.Where(i=>i.IsDeleted==1).ToListAsync());
+            return View(await _unitService.getDataUnit());
         }
         
     }
