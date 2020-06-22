@@ -424,3 +424,4 @@ G:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Areas\Master\
 G:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Areas\Master\Views\Home\Privacy.cshtml.g.cs
 G:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Areas\Master\Views\_ViewImports.cshtml.g.cs
 G:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Areas\Master\Views\_ViewStart.cshtml.g.cs
+G:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Areas\Master\Views\Home\Listunit.cshtml.g.cs

@@ -16,8 +16,6 @@ namespace AssetPertamina.Models
         }
 
         public virtual DbSet<TbUnit> TbUnit { get; set; }
-        public virtual DbSet<TbUser> TbUser { get; set; }
-        public virtual DbSet<TbUserInternal> TbUserInternal { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -36,58 +34,14 @@ namespace AssetPertamina.Models
 
                 entity.ToTable("tb_unit");
 
-                entity.Property(e => e.IdUnit)
-                    .HasColumnName("id_unit")
-                    .ValueGeneratedNever();
+                entity.Property(e => e.IdUnit).HasColumnName("id_unit");
+
+                entity.Property(e => e.IsDeleted).HasColumnName("is_deleted");
 
                 entity.Property(e => e.NamaUnit)
                     .HasColumnName("nama_unit")
                     .HasMaxLength(50)
                     .IsUnicode(false);
-            });
-
-            modelBuilder.Entity<TbUser>(entity =>
-            {
-                entity.HasKey(e => e.IdUser);
-
-                entity.ToTable("tb_user");
-
-                entity.Property(e => e.IdUser)
-                    .HasColumnName("id_user")
-                    .ValueGeneratedNever();
-
-                entity.Property(e => e.AksesUser)
-                    .HasColumnName("akses_user")
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.NamaUser)
-                    .HasColumnName("nama_user")
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.UnitUser).HasColumnName("unit_user");
-            });
-
-            modelBuilder.Entity<TbUserInternal>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToTable("tb_user_internal");
-
-                entity.Property(e => e.AksesUser)
-                    .HasColumnName("akses_user")
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.IdUser).HasColumnName("id_user");
-
-                entity.Property(e => e.NamaUser)
-                    .HasColumnName("nama_user")
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.UnitUser).HasColumnName("unit_user");
             });
 
             OnModelCreatingPartial(modelBuilder);

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<AssetPertamina.Models.TbUnit>
+
+@{
+    ViewData["Title"] = "Unit";
+}
+
+<h1>Unit</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NamaUnit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDeleted)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NamaUnit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDeleted)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdUnit">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdUnit">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdUnit">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

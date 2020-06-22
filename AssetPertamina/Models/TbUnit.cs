@@ -5,7 +5,8 @@ namespace AssetPertamina.Models
 {
     public partial class TbUnit
     {
-        public Guid IdUnit { get; set; }
+        public int IdUnit { get; set; }
         public string NamaUnit { get; set; }
+        public int? IsDeleted { get; set; }
     }
 }
