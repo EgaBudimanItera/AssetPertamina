@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetPertamina", "AssetPertamina\AssetPertamina.csproj", "{59FC25F6-797A-4C9A-9B5F-C1BDF66A194F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59FC25F6-797A-4C9A-9B5F-C1BDF66A194F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59FC25F6-797A-4C9A-9B5F-C1BDF66A194F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59FC25F6-797A-4C9A-9B5F-C1BDF66A194F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59FC25F6-797A-4C9A-9B5F-C1BDF66A194F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1A058AF-3523-4636-A0E3-61B656582C7E}
+	EndGlobalSection
+EndGlobal
