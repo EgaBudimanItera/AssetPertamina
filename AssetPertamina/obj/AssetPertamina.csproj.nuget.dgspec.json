@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "G:\\ASP\\AssetPertamina\\AssetPertamina\\AssetPertamina.csproj": {}
+    "D:\\ASP\\AssetPertamina\\AssetPertamina\\AssetPertamina.csproj": {}
   },
   "projects": {
-    "G:\\ASP\\AssetPertamina\\AssetPertamina\\AssetPertamina.csproj": {
+    "D:\\ASP\\AssetPertamina\\AssetPertamina\\AssetPertamina.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\ASP\\AssetPertamina\\AssetPertamina\\AssetPertamina.csproj",
+        "projectUniqueName": "D:\\ASP\\AssetPertamina\\AssetPertamina\\AssetPertamina.csproj",
         "projectName": "AssetPertamina",
-        "projectPath": "G:\\ASP\\AssetPertamina\\AssetPertamina\\AssetPertamina.csproj",
-        "packagesPath": "C:\\Users\\Ega Budiman\\.nuget\\packages\\",
-        "outputPath": "G:\\ASP\\AssetPertamina\\AssetPertamina\\obj\\",
+        "projectPath": "D:\\ASP\\AssetPertamina\\AssetPertamina\\AssetPertamina.csproj",
+        "packagesPath": "C:\\Users\\AQ\\.nuget\\packages\\",
+        "outputPath": "D:\\ASP\\AssetPertamina\\AssetPertamina\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "F:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ega Budiman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AQ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -102,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
