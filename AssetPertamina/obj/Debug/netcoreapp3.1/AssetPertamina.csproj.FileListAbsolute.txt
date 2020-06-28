@@ -852,3 +852,4 @@ D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\AssetPertamina.dll
 D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\AssetPertamina.pdb
 D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\AssetPertamina.MvcApplicationPartsAssemblyInfo.cs
 D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\AssetPertamina.MvcApplicationPartsAssemblyInfo.cache
+D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout2.cshtml.g.cs
