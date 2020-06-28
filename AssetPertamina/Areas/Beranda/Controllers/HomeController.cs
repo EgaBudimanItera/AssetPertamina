@@ -13,7 +13,7 @@ using AssetPertamina.Services;
 
 namespace AssetPertamina.Controllers
 {
-    [Area("Master")]
+    [Area("Beranda")]
     public class HomeController : BaseController
     {
        
@@ -41,10 +41,6 @@ namespace AssetPertamina.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
         
-        public async Task<IActionResult> Listunit()
-        {
-            return View(await _unitService.getDataUnit());
-        }
         
     }
 }

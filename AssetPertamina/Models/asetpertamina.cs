@@ -585,6 +585,11 @@ namespace AssetPertamina.Models
                     .HasColumnName("deleted_time")
                     .HasColumnType("datetime");
 
+                entity.Property(e => e.FotoUser)
+                    .HasColumnName("foto_user")
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.IdUnit).HasColumnName("id_unit");
 
                 entity.Property(e => e.IsDeleted)

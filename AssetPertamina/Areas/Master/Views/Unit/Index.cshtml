@@ -1,0 +1,272 @@
+﻿@model IEnumerable<AssetPertamina.Models.TbUnit>
+
+@{
+    ViewData["Title"] = "Unit";
+}
+
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Unit</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Master</a></li>
+                    <li class="breadcrumb-item"><a href="#">Data Unit</a></li>
+                    <li class="breadcrumb-item active">List Unit</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+
+                        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#form_modal">Tambah Unit</button>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered table-striped" id="tbunit">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.NamaUnit)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.IsDeleted)
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.NamaUnit)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.IsDeleted)
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-danger btn-sm btnEdit" title="Ubah" data-id="@item.IdUnit" data-nama="@item.NamaUnit">
+
+                                                Ubah
+                                            </button>
+                                            <button class="btn btn-warning btn-sm btnDel" title="Hapus" data-id="@item.IdUnit">
+                                               Hapus
+                                            </button>
+                                           
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Modal -->
+<div class="modal fade" id="form_modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Tambahkan Unit</h4>
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>-->
+            </div>
+            <div class="modal-body">
+                <form id="form_unit" class="form_required">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group row">
+                                <input type="hidden" id="txtidunit" />
+                                <input type="hidden" id="txtflag" />
+                                <label for="example-text-input" class="col-3 col-form-label">Nama Unit :</label>
+                                <div class="col-9">
+                                    <input type="text" class="form-control" id="txtnamaunit" name="kode" placeholder="Masukan Nama Unit" value="" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="SubmitData();">Save changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(function () {
+            $('#tbunit').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+        $('.btnEdit').click(function () {
+           var id = $(this).data('id');
+           console.log(id);
+           edit(this);
+        });
+        $('.btnDel').click(function () {
+           var id = $(this).data('id');
+            var data = {
+                IdUnit: parseInt(id)
+           }
+           swal.fire({
+              title: 'Hapus Data Unit?',
+              showCancelButton: true,
+              confirmButtonText: 'Hapus',
+              cancelButtonText: 'Batal',
+              reverseButtons: true
+           }).then(function (result) {
+              if (result.value) {
+                 $.ajax({
+                    method: "POST",
+                    url: '@Url.Action("DeleteData", "Unit")',
+                    data: JSON.stringify(data),
+                    contentType: 'application/json',
+                    success: function (result) {
+                       if (result.success) {
+                           toastr.success(result.responseMessage, {
+                             delay: 7000,
+	                       });
+                           window.location.reload();
+                       }
+                       else {
+                           toastr.error(result.responseMessage, {
+                             delay: 7000,
+	                       });
+                       }
+                    },
+                    error: function (xhr, status) {
+                       toastr.error(xhr.responseText + xhr.Status);
+                    }
+                 });
+              }
+           });         
+        });
+    });
+    function resetForm() {
+        $('#txtidunit').val('');
+        $('#txtflag').val('');
+        $('#txtnamaunit').val('');
+    }
+    function edit(sender) {
+       $('#form_modal').modal('toggle');
+       var id = sender.attributes['data-id'].value;
+       var nama = sender.attributes['data-nama'].value;
+            
+       $('#txtflag').val('2');
+       $('#txtidunit').val(id);
+       $('#txtnamaunit').val(nama);
+            
+    }
+    function SubmitData() {
+        var flag = $('#txtflag').val();
+
+        var model = {};
+        
+        if (flag != '2') {
+            model = {
+                NamaUnit: $('#txtnamaunit').val(),
+            };
+            SaveData(model);
+        }
+        else {
+            var id = $('#txtidunit').val();
+            model = {
+                IdUnit: parseInt(id),
+                NamaUnit: $('#txtnamaunit').val(),
+                
+            };
+            
+            EditData(model);
+        }
+        
+    }
+    function SaveData(model) {
+        $.ajax({
+            type: 'POST',
+            contentType: "application/json; charset=utf-8",
+            url: '@Url.Action("InsertData", "Unit")',
+                
+            data: JSON.stringify(model),
+            dataType: 'JSON',
+            success: function (result) {
+                if (result.success) {
+                    toastr.success(result.responseMessage, {
+                        delay: 5000,
+	                });
+                    resetForm();
+                    $('#form_modal').modal('toggle');
+                    window.location.reload();
+                }
+                else {
+                    toastr.error(result.responseMessage, {
+	                    delay: 5000
+	                });
+                }
+            },
+            error: function (xhr, status) {
+                toastr.error(xhr.responseText + xhr.Status,{
+                        delay: 5000,
+	            });
+            }
+        })
+    }
+
+    function EditData(model) {
+        
+        $.ajax({
+                type: 'POST',
+                contentType: "application/json; charset=utf-8",
+                url: '@Url.Action("UpdateData", "Unit")',
+                
+                data: JSON.stringify(model),
+                dataType: 'JSON',
+                success: function (result) {
+                    console.log(result);
+                    if (result.success) {
+                        toastr.success(result.responseMessage, {
+                            delay: 5000,
+	                    });
+                        resetForm();
+                        $('#form_modal').modal('toggle');
+                        window.location.reload();
+                        
+                    }
+                    else {
+                        toastr.error(result.responseMessage, {
+	                        delay: 5000
+	                    });
+                    }
+                },
+                error: function (xhr, status) {
+                    toastr.error(xhr.responseText + xhr.Status);
+                }
+            })
+        }
+</script>
+
+

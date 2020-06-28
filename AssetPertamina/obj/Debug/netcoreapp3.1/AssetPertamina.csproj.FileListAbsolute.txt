@@ -833,9 +833,6 @@ D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\AssetPertamina.TagH
 D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\AssetPertamina.TagHelpers.output.cache
 D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\AssetPertamina.RazorCoreGenerate.cache
 D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Areas\Master\Views\Home\Index.cshtml.g.cs
-D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Areas\Master\Views\Home\Listunit.cshtml.g.cs
-D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Areas\Master\Views\Home\Privacy.cshtml.g.cs
 D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Areas\Master\Views\_ViewImports.cshtml.g.cs
 D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Areas\Master\Views\_ViewStart.cshtml.g.cs
 D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
@@ -853,3 +850,9 @@ D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\AssetPertamina.pdb
 D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\AssetPertamina.MvcApplicationPartsAssemblyInfo.cs
 D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\AssetPertamina.MvcApplicationPartsAssemblyInfo.cache
 D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout2.cshtml.g.cs
+D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Areas\Beranda\Views\Home\Index.cshtml.g.cs
+D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Areas\Beranda\Views\Home\Listunit.cshtml.g.cs
+D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Areas\Beranda\Views\Home\Privacy.cshtml.g.cs
+D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Areas\Beranda\Views\_ViewImports.cshtml.g.cs
+D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Areas\Beranda\Views\_ViewStart.cshtml.g.cs
+D:\ASP\AssetPertamina\AssetPertamina\obj\Debug\netcoreapp3.1\Razor\Areas\Master\Views\Unit\Index.cshtml.g.cs

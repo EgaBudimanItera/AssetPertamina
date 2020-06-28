@@ -29,10 +29,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\Base\Views\" />
-    <Folder Include="Areas\Dashboard\Controllers\" />
-    <Folder Include="Areas\Dashboard\Data\" />
-    <Folder Include="Areas\Dashboard\Models\" />
-    <Folder Include="Areas\Dashboard\Views\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
 

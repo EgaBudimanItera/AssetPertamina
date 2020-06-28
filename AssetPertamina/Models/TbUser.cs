@@ -9,6 +9,7 @@ namespace AssetPertamina.Models
         public string NamaUser { get; set; }
         public string AksesUser { get; set; }
         public int IdUnit { get; set; }
+        public string FotoUser { get; set; }
         public DateTime? CreatedTime { get; set; }
         public string CreatedBy { get; set; }
         public DateTime? UpdatedTime { get; set; }

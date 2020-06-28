@@ -62,7 +62,7 @@ namespace AssetPertamina
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{area=Master}/{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{area=Beranda}/{controller=Home}/{action=Index}/{id?}");
                    
             endpoints.MapRazorPages();
             });
